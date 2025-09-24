@@ -254,7 +254,7 @@ fn build_from_src(features: Features, _out_dir: &str) {
     let dst_dir = config.build();
     println!(
         "cargo:rustc-link-search=native={}",
-        dst_dir.join("lib").display()
+        dst_dir.join("lib64").display()
     );
     if !features.static_link && features.os == TargetOs::Win {
         println!(
